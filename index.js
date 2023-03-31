@@ -33,7 +33,7 @@ function register(newusername, newpassword, newname, newemail){
     //TODO: Check if username exist
     let checked = dbUsers.find(element => element.username == newusername)
     if(checked){
-        return "Username has been taken"
+        console.log("Username has been taken")
     }
     else{
         dbUsers.push({
@@ -60,4 +60,4 @@ function register(newusername, newpassword, newname, newemail){
 //console.log( login("ainur", "111111"))
 
 //try to register (FALSE)
-console.log(register( "saiful", "abcdef", "Sepul Eerza", "eerza@gmail.com"))
+register( "saiful", "abcdef", "Sepul Eerza", "eerza@gmail.com")
